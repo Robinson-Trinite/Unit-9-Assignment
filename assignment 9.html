@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Games</title>
+	</head>
+	<body>
+		<form action="" id="holderForm" onchange="submitCheck()">
+		<label for="">Name</label><input type="text" name="Name"><br>
+		<label for="">E-mail</label><input type="text" name="email"><br>
+		<label for="">Login Name *</label><input type="text" name="loginName" id="loginName"><br>
+		<label for="">Password *</label><input type="text" name="passwordMaker" id="passwordMaker"><br>
+		<label for="">Password Retype *</label><input type="text" name="passwordRetype" id="passwordRetype"><span id="correctRetype"> </span><br>
+		<input type="submit" value="Submit" id="submitButton" onclick="successCheck()">
+		</form>
+		
+		<script>
+			document.getElementById("submitButton").disabled = true;
+
+			function submitCheck(){
+				loginName = document.getElementById("loginName").value;
+				passwordMaker = document.getElementById("passwordMaker").value;
+				passwordRetype = document.getElementById("passwordRetype").value;
+				
+
+
+
+				if (loginName !== "" && passwordMaker !== "" && passwordRetype !== "" && passwordRetype === passwordMaker){
+					
+					document.getElementById("submitButton").disabled = false;
+					document.getElementById("correctRetype").innerHTML = "";
+
+				}
+				if(passwordRetype !== "" && passwordRetype !== passwordMaker){
+
+					document.getElementById("correctRetype").innerHTML = "please retype";
+				
+				}
+				
+			}
+			function successCheck(){
+				alert("success");
+			}
+		</script>
+	</body>
+</html>

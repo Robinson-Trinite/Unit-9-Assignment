@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Games</title>
+	</head>
+	<body>
+		<form action="" id="holderForm">
+		<label for="">Name</label><input type="text" name="fullName" onfocus="nameFocus()" onblur="nameBlur()"><span id="fullNameGuide">PLease Enter your full name</span><br>
+		<label for="">Occupation</label><input type="text" name="occupation" onfocus="occupationFocus()" onblur="occupationBlur()"><span id="fullOccupationGuide">Please enter your occupation and what it entails</span><br>
+		<label for="">Favorite Book</label><input type="text" name="favBook" id="favBook" onfocus="bookFocus()" onblur="bookBlur()"><span id="favBookGuide">What is your favorite book and why/</span><br>
+		<label for="">Favorite Show</label><input type="text" name="favShow" id="favShow" onfocus="showFocus()" onblur="showBlur()"><span id="favShowGuide">Favorite tv show that was made in the last 4 years </span><br>
+		<label for="">Best Friends</label><input type="text" name="favFriends" id="favFriends" onfocus="friendsFocus()" onblur="friendsBlur()"><span id="favFriendsGuide">Who are your best friends and why. Share some stories that you've had with them.</span><br>
+		<input type="submit" value="Submit" id="submitButton" onclick="successCheck()">
+		</form>
+		
+		<script>
+			
+
+			function nameFocus(){
+				document.getElementById('fullNameGuide').style.display = "inline";
+
+			}
+			function nameBlur(){
+				document.getElementById('fullNameGuide').style.display = "none";
+
+			}
+
+
+			function occupationFocus(){
+				document.getElementById('fullOccupationGuide').style.display = "inline";
+
+			}
+			function occupationBlur(){
+				document.getElementById('fullOccupationGuide').style.display = "none";
+
+			}
+			
+			function bookFocus(){
+				document.getElementById('favBookGuide').style.display = "inline";
+
+			}
+			function bookBlur(){
+				document.getElementById('favBookGuide').style.display = "none";
+
+			}
+
+			function showFocus(){
+				document.getElementById('favShowGuide').style.display = "inline";
+
+			}
+			function showBlur(){
+				document.getElementById('favShowGuide').style.display = "none";
+
+			}
+
+			function friendsFocus(){
+				document.getElementById('favFriendsGuide').style.display = "inline";
+
+			}
+			function friendsBlur(){
+				document.getElementById('favFriendsGuide').style.display = "none";
+
+			}
+		</script>
+
+
+		<style>
+			#fullNameGuide{
+				display:none;
+				
+			}
+			
+			#fullOccupationGuide{
+				display:none;
+				
+			}
+
+			#favBookGuide{
+				display:none;
+				
+			}
+			
+			
+			#favShowGuide{
+				display:none;
+				
+			}
+
+			#favFriendsGuide{
+				display:none;
+				
+			}
+		</style>
+	</body>
+</html>
